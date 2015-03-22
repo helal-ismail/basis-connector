@@ -8,6 +8,6 @@ Gem::Specification.new do |s|
   s.email       = 'helal.hamed@gmail.com'
   s.files       = ["lib/basis/connector.rb"]
   s.homepage    =
-    'http://rubygems.org/gems/basis-connector'
+    'http://helal-ismail.github.io/basis-connector/'
   s.license       = 'GNU GENERAL PUBLIC LICENSE'
 end
