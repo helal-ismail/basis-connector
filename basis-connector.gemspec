@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.description = ""
   s.authors     = ["Helal Ismail"]
   s.email       = 'helal.hamed@gmail.com'
-  s.files       = ["lib/basis/connector.rb"]
+  s.files       = ["lib/basis-connector.rb"]
   s.homepage    =
     'http://helal-ismail.github.io/basis-connector/'
   s.license       = 'GNU GENERAL PUBLIC LICENSE'
