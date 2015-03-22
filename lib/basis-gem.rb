@@ -22,20 +22,21 @@ class Basis
     end
   end
 
-  def get_data(type, date)
-    case type.downcase
-    when 'metrics'
-      url = "https://app.mybasis.com/api/v1/metricsday/me?day=#{date}&padding=0&heartrate=true&steps=true&calories=true&gsr=true&skin_temp=true&air_temp=true"
-      data = https_fetch(url, @token)
-    when 'activities'
-      url = "https://app.mybasis.com/api/v2/users/me/days/#{date}/activities?type=run,walk,bike&expand=activities"
-      data = https_fetch(url, @token)
-    when 'sleep'
-      url = "https://app.mybasis.com/api/v2/users/me/days/#{date}/activities?type=sleep&expand=activities.stages,activities.events"
-      data = https_fetch(url, @token)
-    else
-    return nil
-    end
+  def get_metrics(date)
+    url = "https://app.mybasis.com/api/v1/metricsday/me?day=#{date}&padding=0&heartrate=true&steps=true&calories=true&gsr=true&skin_temp=true&air_temp=true"
+    data = https_fetch(url, @token)
+    return JSON.parse(data)
+  end
+
+  def get_activities
+    url = "https://app.mybasis.com/api/v2/users/me/days/#{date}/activities?type=run,walk,bike&expand=activities"
+    data = https_fetch(url, @token)
+    return JSON.parse(data)
+  end
+
+  def get_sleep
+    url = "https://app.mybasis.com/api/v2/users/me/days/#{date}/activities?type=sleep&expand=activities.stages,activities.events"
+    data = https_fetch(url, @token)
     return JSON.parse(data)
   end
 
