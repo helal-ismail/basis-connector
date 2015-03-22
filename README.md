@@ -1,10 +1,10 @@
-# basis-gem
+# basis-connector
 ## Description
 An HTTP Client library for MyBasis.com Fitness Trackers
 
 ***
 ## Installation
-`$gem install basis-connector`
+`$ gem install basis-connector`
 
 ***
 ## Authentication
